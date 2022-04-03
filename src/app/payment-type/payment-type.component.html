@@ -1,0 +1,25 @@
+<div class="paymentbox">
+    <table>
+        <tr class="heading">
+            <td colspan="3">
+                Payment Method
+            </td>
+            
+            <td>
+                Payment Types Accepted
+            </td>
+        </tr>
+        
+        <tr class="details">
+            <td colspan="3">
+                {{formpaymenttype}}
+            </td>
+            
+            <td>
+                <select [(ngModel)]="formpaymenttype" name="paymenttype">
+                    <option *ngFor="let item of paymentType">{{item}}</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</div>

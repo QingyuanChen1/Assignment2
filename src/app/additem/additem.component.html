@@ -1,0 +1,11 @@
+<div class="inputbox">
+    <form >
+        <label for="inputitem"></label>
+        Item: <input type="text"[(ngModel)] ="formitem" class="form-item" name="item">
+        <label for="inputhours"></label>
+        Hours: <input type="text" class="form-hours"[(ngModel)]="formhours" name="hours">
+        <label for="inputrate"></label>
+        Hourly Rate: <input type="text" [(ngModel)]="formrate" class="form-rate" name="rate">
+        <button type="button"(click)="addItemToList()" class="btn btn-primary">Add</button>
+    </form>
+</div>

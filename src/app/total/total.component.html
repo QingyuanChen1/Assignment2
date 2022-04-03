@@ -1,0 +1,30 @@
+<div class="invoice-box">
+    <table>
+        <tbody>
+            <tr>
+                <td>Total Hours:   {{totalnumber()| number : '1.2-2'}} </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td class="align-right">Subtotal: </td>
+                <td class="align-right">{{ subtotal() |  currency  : 'USD' : 'symbol' : '1.2-2'}}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td class="align-right">Taxes:</td>
+                <td class="align-right"> {{subtotal() * tax() |  currency  : 'USD' : 'symbol' : '1.2-2'}}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td class="align-right">Total: </td>
+                <td class="align-right">{{subtotal() + subtotal() * tax() |  currency  : 'USD' : 'symbol' : '1.2-2'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

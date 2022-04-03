@@ -1,0 +1,25 @@
+<div class="invoice-box">
+    
+<table class="table">
+    <thead>
+      <tr class="heading">
+        <th class="subtitle" scope="col">item</th>
+        <th class="subtitle" scope="col">Title </th>
+        <th class="subtitle" scope="col">Hours Worked</th>
+        <th class="subtitle" scope="col">Hourly Rate</th>
+        <th class="subtitle" scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody class="tableStuff">
+      <tr  class="item" *ngFor="let item of serviceitem.invoice.invoiceitems; index as i;">
+        <!-- <td><button (click)="autoService.deleteItem(i)">X</button></td> -->
+        <td class="item">{{i+1}}</td>
+        <td class="item">{{item.item}}</td>
+        <td class="item">{{item.hours}}</td>
+        <td class="item">{{item.hourlyrate}}</td>
+        <td class="item">{{serviceitem.calculateTotal(item.hours,item.hourlyrate)| currency : 'USD' : 'symbol': '1.0-0'}}</td>
+      </tr>
+    </tbody>
+    </table>
+
+</div>
